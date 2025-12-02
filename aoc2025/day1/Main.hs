@@ -42,10 +42,10 @@ rotateCountIntermediate (cnt, num) (Right distance) =
 
 -- Rotate arrow from given number using given command and count rotations
 execute :: [Command] -> Int -> Int
-execute cmds start = fst $ foldl rotateCountFinal (0, 50) cmds
+execute cmds start = fst $ foldl rotateCountFinal (0, start) cmds
 
 executeIntermediate :: [Command] -> Int -> Int
-executeIntermediate cmds start = fst $ foldl rotateCountIntermediate (0, 50) cmds
+executeIntermediate cmds start = fst $ foldl rotateCountIntermediate (0, start) cmds
 
 -- Part 1
 part1 :: IO ()
